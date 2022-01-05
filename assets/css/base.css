@@ -1,0 +1,192 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Crimson+Text:wght@400;600&display=swap');
+:root{
+    --main-color:#d3ad7f;
+    --black-color:#13131a;
+    --blackground-color:#010103;
+    --border: 0.1rem solid rgba(255,255,255,.3);
+}
+body{
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-image: url(/assets/img/picart.jpg);
+    background-size: cover;
+    background-blend-mode: overlay;
+    overflow: hidden;
+    font-family: 'Courier New', Courier, monospace;
+}
+.container{
+    position: relative;
+    display: block;
+    height: 500px;
+    color: #010103;
+    width: 580px;
+    background-image:url();
+    justify-content: center;
+    border-radius: 10px;
+    align-items: center;
+    background-size: cover;
+    overflow: hidden;
+}
+.text{
+    position: absolute;
+    display: inline-block;
+    color: rgb(0, 0, 0);
+    left: -200%;
+    height: 400px;
+    width: 500px;
+    transition:  all 0.4s ease-in-out;
+
+}
+.container:hover .text{
+    left: 2%;
+    cursor: pointer;
+}
+.text h1{
+    text-align: center;
+}
+.letter{
+    transition: all 0.2s ease-in-out;
+    animation: animate 3s linear infinite;
+    animation-delay: 0.5s;
+}
+@keyframes animate
+{
+    0%
+    {
+        color: #fff;
+        filter: blur(2px) hue-rotate(0deg);
+        text-shadow: 0 0 10px #fbff0dce,
+        0 0 20px #fbff0dce,
+        0 0 40px #fbff0dce,
+        0 0 80px #fbff0dce,
+        0 0 120px #fbff0dce,
+        0 0 200px #fbff0dce,
+        0 0 300px #fbff0dce,
+        0 0 400px #fbff0dce;
+    }
+    30%, 70%
+    {
+        color: #fff;
+        filter: blur(2px) hue-rotate(360deg);
+        text-shadow: 0 0 10px #fbff0dce,
+        0 0 20px #fbff0dce,
+        0 0 40px #fbff0dce,
+        0 0 80px #fbff0dce,
+        0 0 120px #fbff0dce,
+        0 0 200px #fbff0dce;
+    }
+    100%
+    {
+        color: transparent;
+        box-shadow: none;
+        filter: blur(2px) hue-rotate(0deg);
+    }
+}
+
+a{
+    position: relative;
+    display: inline-block;
+    padding: 15px 30px;
+    color: #fbff0dce;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    text-decoration: none;
+    font-size: 24px;
+    overflow: hidden;
+    transition: 0.2s;
+}
+a:hover{
+    color: rgba(255, 255, 255, 0.884);
+    box-shadow: 0 0 10px #fbff0dce, 0 0 409x #fbff0dce, 0 0 80px #fbff0dce;
+    transition-delay: 0.6s;
+}
+a .light{
+    position: absolute;
+    display: block;
+}
+a .light:nth-child(1){
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(90deg,transparent,#fbff0dce);
+}
+a:hover .light:nth-child(1){
+    left: 100%;
+    transition: 1s;
+}
+a .light:nth-child(3){
+    bottom: 0;
+    right: -100%;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(270deg,transparent,#fbff0dce);
+}
+a:hover .light:nth-child(3){
+    right: 100%;
+    transition: 1s;
+    transition-delay: 0.5s;
+}
+a .light:nth-child(2){
+    top: -100%;
+    right: 0;
+    width: 2px;
+    height: 100%;
+    background: linear-gradient(180deg,transparent,#fbff0dce);
+}
+a:hover .light:nth-child(2){
+    top: 100%;
+    transition: 1s;
+    transition-delay: 0.25s;
+}
+a .light:nth-child(4){
+    bottom: -100%;
+    left: 0;
+    width: 2px;
+    height: 100%;
+    background: linear-gradient(360deg,transparent,#fbff0dce);
+}
+a:hover .light:nth-child(4){
+    bottom: 100%;
+    transition: 1s;
+    transition-delay: 0.25s;
+}
+section{
+    position: relative;
+    display: inline-block;
+    color: #010103;
+    left: 20px;
+    justify-content: center;
+    align-items: center;
+    border-radius: 2%;
+}
+.content h2, .content p{
+    position: relative;
+    color: #010103;
+    font-size: 1.3rem;
+    font-weight: lighter;
+    align-items: center;
+    display: inline-block;
+    text-shadow: 0 2px 1px rgba(3, 0, 0, 0.623);
+    overflow: hidden;
+}
+.content h2{
+    animation: textTyping 5s steps(16) infinite;
+    box-shadow: 1px 0 0 #fff;
+}
+@keyframes textTyping
+{
+    0%,90%,100%
+    {
+        width: 220px;
+    }
+    30%,60%
+    {
+        width: 440px ;
+    }
+}
